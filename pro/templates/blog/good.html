@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+
+<head>
+    <title>MyBlog</title>
+    <style>
+            body{
+                background-color: wheat;
+                    
+        
+        
+            }
+            table{
+               margin-left: 20px;
+                float: left;
+               
+                   
+            }
+            label
+            {   color: yellow;
+                float:right;
+                margin-right: 10%;
+
+            }
+            
+    </style>
+</head>
+
+<body>
+        <div id="a">
+            <img src="{% static "img/4.jpg" %}" width="100%" height="200px">
+            <br/>
+            <br/>
+            
+        </div>
+        
+         
+            <table  border="1px" >
+                   
+                     <tr>
+                         
+                        <th>排名</th>
+                        <th>手机名</th>
+                        <th>价格</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>其他信息</th>
+                        <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+                        <th>更多...</th>
+                        
+                        </tr>
+                       
+                        {% for a  in  mobeils %}
+                            <tr>
+                                <td><center>{{a.id}}</center></td>
+                                <td><center>{{a.title}}</center></td>
+                                <td><center>{{a.price}}</center></td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><center>{{a.comment}}</center></td>
+                                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                                <td><a href="https://search.jd.com/Search?keyword=%E6%89%8B%E6%9C%BA&enc=utf-8&wq=%E6%89%8B%E6%9C%BA&pvid=d8c7439106bc4b40939fc102b20246df">点解了解</td>
+
+                            </tr>
+                        {% endfor%}
+                        
+                        </table> 
+             <label>
+                &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;<font size="100px" color:yellow> 著名手机品牌</font>
+               <br/>
+               <a href="https://www.vmall.com/?cid=91895">
+               <img src="{% static "img/huawei.jpeg" %}"  width="400px" height="100px">
+               </a>
+               <br/><br/><br/><br/><br/>
+               <a href="https://www.apple.com/cn/?afid=p238%7C11DPVC7K_mtid_18707vxu38484&cid=aos-cn-kwsg-brand"></a>
+               <img src="{% static "img/iphone.jpg" %}" width="400px" height="100px">
+               </a>
+               <br/><br/><br/><br/><br/>
+               <a href="https://www.mi.com/"></a>
+               <img src="{% static "img/xiaomi.png" %}" width="400px" height="100px">
+               </a>
+               <br/><br/><br/><br/><br/>
+               <a href="https://www.nokia.com/zh_int/"></a>
+               <img src="{% static "img/rjy.jpg" %}" width="400px" height="100px">
+               </a>
+             </label>      
+             
+      
+</body>
+
+</html>
